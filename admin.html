@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Red White Creative Name Letter Company Logo  (2).png" alt="Logo" />
+        </div>
+        <div class="header-title">
+            <h1>Welcome<span></span></h1>
+        </div>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+        <section id="addTeacherSection">
+            <h2>Add Teacher</h2>
+            <label for="teacherName">Name:</label>
+            <input type="text" id="teacherName" placeholder="Enter teacher name">
+            <label for="teacherEmail">Email:</label>
+            <input type="email" id="teacherEmail" placeholder="Enter teacher email">
+            <label for="teacherPassword">Password:</label>
+            <input type="password" id="teacherPassword" placeholder="Enter teacher password">
+            <button id="addTeacherBtn">Add Teacher</button>
+        </section>
+
+        <section id="addStudentSection">
+            <h2>Add Student</h2>
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" placeholder="Enter student name">
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" placeholder="Enter student email">
+            <label for="studentPassword">Password:</label>
+            <input type="password" id="studentPassword" placeholder="Enter student password">
+            <label for="studentClass">Class:</label>
+            <select id="studentClass">
+                <option value="BCS3A">BCS3A</option>
+                <option value="BCS3B">BCS3B</option>
+                <option value="BCS3C">BCS3C</option>
+                <option value="BCS3D">BCS3D</option>
+            </select>
+            <button id="addStudentBtn">Add Student</button>
+        </section>
+
+        <section id="viewDetailsSection">
+            <h2>Teacher & Student Details</h2>
+            <h3>Teachers</h3>
+            <table id="teacherTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h3>Students</h3>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Class</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="admin-script.js"></script>
+</body>
+
+</html>

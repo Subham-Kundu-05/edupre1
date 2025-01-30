@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Page</title>
+    <link rel="stylesheet" href="teacher-styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Red White Creative Name Letter Company Logo  (2).png" alt="Logo" />
+        </div>
+        <div class="welcome">
+            Welcome <span id="teacherNameHeader"></span>
+        </div>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+        <section id="teacherDetails">
+            <h2>Your Details</h2>
+            <p><strong>Name:</strong> <span id="teacherNameDetail"></span></p>
+            <p><strong>Email:</strong> <span id="teacherEmailDetail"></span></p>
+            <p><strong>Password:</strong> <span id="teacherPasswordDetail"></span></p>
+        </section>
+
+        <section id="takeAttendance">
+            <h2>Take Attendance</h2>
+            <label for="attendanceClass">Class:</label>
+            <select id="attendanceClass">
+                <option value="BCS3A">BCS3A</option>
+                <option value="BCS3B">BCS3B</option>
+                <option value="BCS3C">BCS3C</option>
+                <option value="BCS3D">BCS3D</option>
+            </select>
+
+            <label for="attendanceSubject">Subject:</label>
+            <input type="text" id="attendanceSubject" placeholder="Enter Subject">
+
+            <label for="attendanceDate">Date:</label>
+            <input type="date" id="attendanceDate">
+
+            <button id="loadStudentsBtn">Load Students</button>
+
+            <ul id="studentList"></ul>
+        </section>
+
+        <section id="viewAttendanceSection">
+            <h2>View Attendance</h2>
+            <label for="viewAttendanceClass">Class:</label>
+            <select id="viewAttendanceClass">
+                <option value="BCS3A">BCS3A</option>
+                <option value="BCS3B">BCS3B</option>
+                <option value="BCS3C">BCS3C</option>
+                <option value="BCS3D">BCS3D</option>
+            </select>
+
+            <label for="viewAttendanceDate">Date:</label>
+            <input type="date" id="viewAttendanceDate">
+
+            <button id="viewAttendanceBtn">View Attendance</button>
+
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="teacher-script.js"></script>
+</body>
+
+</html>

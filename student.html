@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student-styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="Red White Creative Name Letter Company Logo  (2).png" alt="Logo" />
+        </div>
+        <div class="header-title">
+            <h1>Welcome , <span id="studentName"></span></h1>
+        </div>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <!-- Student Details Section -->
+    <div id="studentDetails">
+        <h2>Your Details</h2>
+        <p><strong>Name:</strong> <span id="studentNameDetail"></span></p>
+        <p><strong>Email:</strong> <span id="studentEmailDetail"></span></p>
+        <p><strong>Class:</strong> <span id="studentClassDetail"></span></p>
+        <p><strong>Password:</strong> <span id="studentPasswordDetail"></span></p>
+        <!-- Added password -->
+    </div>
+
+    <!-- Attendance Section -->
+    <div id="attendanceDetails">
+        <h2>Attendance</h2>
+        <label for="attendanceClass">Class:</label>
+        <input type="text" id="attendanceClass" placeholder="Enter class" readonly />
+
+        <label for="attendanceDate">Date:</label>
+        <input type="date" id="attendanceDate" />
+
+        <button id="viewAttendanceBtn">View Attendance</button>
+
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+
+</html>

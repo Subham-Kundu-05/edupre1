@@ -1,0 +1,278 @@
+/* General Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+}
+
+header .welcome {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+header button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Main Content */
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+
+/* Teacher Details Section */
+
+#teacherDetails {
+    margin-bottom: 30px;
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#teacherDetails p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#teacherDetails p strong {
+    color: #333;
+}
+
+
+/* Take Attendance Section */
+
+#takeAttendance {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f1f8e9;
+    border: 1px solid #dcedc8;
+    border-radius: 8px;
+}
+
+#takeAttendance label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#takeAttendance select,
+#takeAttendance input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#takeAttendance button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#takeAttendance button:hover {
+    background-color: #388E3C;
+}
+
+
+/* Student List (Converted to Table) */
+
+
+/* Ensure student list items are displayed properly */
+
+#studentList li {
+    display: flex;
+    /* Arrange elements in a row */
+    align-items: center;
+    /* Align text and buttons */
+    justify-content: space-between;
+    /* Spread content */
+    margin-bottom: 10px;
+    /* Add spacing between rows */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    list-style: none;
+    /* Remove bullet points */
+}
+
+
+/* Style buttons properly */
+
+#studentList button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    /* Add space between buttons */
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Present button */
+
+#studentList button.present {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#studentList button.present:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+
+/* Absent button */
+
+#studentList button.absent {
+    background-color: #f44336;
+    color: white;
+}
+
+#studentList button.absent:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+    #studentList li {
+        flex-direction: column;
+        /* Stack elements in mobile view */
+        align-items: flex-start;
+    }
+    #studentList button {
+        width: 100%;
+        /* Full width for better usability */
+        margin-top: 5px;
+    }
+}
+
+
+/* View Attendance Section */
+
+#viewAttendanceSection {
+    padding: 20px;
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 8px;
+}
+
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#attendanceTable th,
+#attendanceTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#attendanceTable th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#attendanceTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#attendanceTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+#attendanceTable td {
+    font-size: 0.95rem;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header .welcome {
+        margin: 10px 0;
+    }
+    main {
+        padding: 15px;
+    }
+    #teacherDetails,
+    #takeAttendance,
+    #viewAttendanceSection {
+        padding: 15px;
+    }
+    #studentListTable {
+        font-size: 0.9rem;
+    }
+}
